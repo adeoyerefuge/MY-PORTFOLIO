@@ -3,27 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>REFUGE's Bold Site</title>
+  <title>REFUGE | Architectural Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Orbitron', sans-serif;
       background: #0f0f0f;
       color: white;
     }
-    header {
-      background: linear-gradient(to right, turquoise, neongreen);
-      padding: 2rem;
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      font-size: 2rem;
+      background: linear-gradient(to right, turquoise, neonorange);
       animation: fadeIn 2s ease-in;
     }
-    section {
-      padding: 2rem;
-      transition: all 0.3s ease;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
-    section:hover {
-      background: #1a1a1a;
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    .btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: white;
+      color: #0f0f0f;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    .btn:hover {
+      transform: scale(1.1);
     }
     @keyframes fadeIn {
       from { opacity: 0; }
@@ -32,9 +50,10 @@
   </style>
 </head>
 <body>
-  <header>Welcome to REFUGE's World</header>
-  <section>
-    <p>This is your bold, confident, innovative space. Edit this anytime. Make it yours.</p>
+  <section class="hero">
+    <h1>Welcome to REFUGE's World</h1>
+    <p>Bold, innovative architectural designs. 3D visuals. Creative solutions built on elegance and function.</p>
+    <button class="btn">Explore Portfolio</button>
   </section>
 </body>
 </html>
