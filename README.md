@@ -3,66 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <title>Adeoye's Portfolio</title>
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
       --primary: #0078d7;
     }
 
-    /* 🔹 Animated gradient background */
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      background: linear-gradient(-45deg, #0078d7, #00c6ff, #ff6f61, #6a11cb);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      transition: background 0.5s, color 0.5s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    body.dark-mode {
-      background: linear-gradient(-45deg, #121212, #1e1e1e, #333333, #000000);
-      background-size: 400% 400%;
-      animation: gradientBG 20s ease infinite;
-      color: #f4f4f4;
-    }
-
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* 🔹 Floating shapes */
-    .background-animation {
+    /* 🔹 Video background */
+    .video-background {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      z-index: -1;
       overflow: hidden;
+      z-index: -1;
+    }
+    .video-background video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .background-animation::before,
-    .background-animation::after {
-      content: '';
-      position: absolute;
-      width: 200px; height: 200px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 50%;
-      animation: float 20s infinite;
+    /* 🔹 Overlay for readability */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4); /* dark tint */
+      z-index: -1;
     }
 
-    .background-animation::after {
-      left: 50%;
-      background: rgba(0, 120, 215, 0.2);
-      animation-duration: 25s;
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      text-align: center;
     }
 
-    @keyframes float {
-      0% { transform: translateY(0) translateX(0); }
-      50% { transform: translate
+    h1 {
+      margin-top: 100px;
+      font-size: 3rem;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      display: inline-block;
+      color: #fff;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔹 Video background -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <!-- Replace with your chosen architecture video -->
+      <source src="background.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="overlay"></div>
+
+  <h1>Adeoye's Portfolio</h1>
+  <p>Welcome to my portfolio site!</p>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">Modern Residential Concept</div>
+    <div class="project-card">Futuristic Office Space</div>
+    <div class="project-card">Eco-Friendly Pavilion</div>
+  </section>
+
+  <section id="about">
+    <h2>About REFUGE</h2>
+    <p>I'm Adeoye Refuge – a visionary</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: adeoye@example.com</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+</body>
+</html>
