@@ -9,7 +9,7 @@
     :root {
       --primary: #0078d7;
     }
-
+background.mp4
     /* 🔹 Video background */
     .video-background {
       position: fixed;
