@@ -37,7 +37,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0, 0, 0, 0.35);
       z-index: -1;
     }
 
@@ -164,11 +164,11 @@
 <body>
 
   <!-- Video Background -->
-  <video autoplay muted loop playsinline>
+  <video autoplay muted loop playsinline id="big-video">
     <source src="background.mp4" type="video/mp4" />
   </video>
   <div class="overlay"></div>
-
+  <!--END VIDEO BACKGROUND -->
   <!-- Navigation -->
   <nav>
     <h2>ARCHPRO</h2>
