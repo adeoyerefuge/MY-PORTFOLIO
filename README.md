@@ -20,7 +20,7 @@
     }
 
     /* Video Background */
-    video {
+    #bg-video {
       position: fixed;
       top: 0;
       left: 0;
