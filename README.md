@@ -165,7 +165,7 @@
 
   <!-- Video Background -->
   <video autoplay muted loop playsinline id="big-video">
-    <source src="background.mp4" type="video/mp4" />
+    <source src="background.mp4" type="video/mp4">
   </video>
   <div class="overlay"></div>
   <!--END VIDEO BACKGROUND -->
